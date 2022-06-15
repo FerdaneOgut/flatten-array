@@ -41,7 +41,7 @@ func Test_ShouldFlattenArray(t *testing.T) {
 	for _, v := range testCases {
 		res := flatten(v.value)
 		expected := v.expected
-		if len(expected) != len(expected) {
+		if len(expected) != len(res) {
 			t.Errorf("Couldn't flatten the array expected: %v, got :%v", expected, res)
 		}
 		isEqual := reflect.DeepEqual(res, expected)
